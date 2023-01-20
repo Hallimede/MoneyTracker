@@ -1,0 +1,22 @@
+{
+  "name": "money-tracker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.17.15",
+    "@types/node": "^18.11.18",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "tsc": "^2.0.4"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node-dev --respawn src/index.ts",
+    "dev": "nodemon --exec ts-node src/index.ts"
+  }
+}
