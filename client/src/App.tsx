@@ -1,13 +1,31 @@
 import React from 'react';
 import './App.css';
-import Hello from './components/Hello';
+import { Todo } from './components/Todo';
+import IndexRouter from './router/router';
 
-function App() {
-  return (
-    <div className="App">
-      <Hello title='hihi' />
-    </div>
-  );
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.clickHandler = this.clickHandler.bind(this);
+  }
+
+  clickHandler(data: string) {
+    console.log(data);
+    console.log(`type:${typeof (this.clickHandler)}`);
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Todo title='sss' />
+        <IndexRouter></IndexRouter>
+        {/* <Hello title='hihi' onMyClick={this.clickHandler} /> */}
+        {/* <List /> */}
+      </div>
+    );
+  }
+
 }
 
 export default App;

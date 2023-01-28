@@ -1,0 +1,32 @@
+.form-div {
+    margin: 10px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.digit-input {
+    text-align: right;
+    border: none;
+    width: 30px;
+}
+
+.digit-input-div {
+    /* border: 2px solid; */
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row-label {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.form-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}

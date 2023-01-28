@@ -1,14 +1,15 @@
 import * as React from 'react';
 
 interface IProps {
-    title: string
+    title: string,
+    onMyClick: Function
 }
 
 interface IState {
     count: number
 }
 
-export default class Hello extends React.Component<IProps, IState> {
+class Hello extends React.Component<IProps, IState> {
 
     constructor(props: IProps) {
         super(props);
@@ -16,13 +17,17 @@ export default class Hello extends React.Component<IProps, IState> {
             count: 0
         };
         this.clickHandler = this.clickHandler.bind(this);
-
+        this.msgHandler = this.msgHandler.bind(this);
     }
 
     clickHandler() {
         this.setState({
             count: this.state.count + 1
         });
+    }
+
+    msgHandler() {
+        this.props.onMyClick("pass a parameter");
     }
 
     render() {
@@ -36,7 +41,10 @@ export default class Hello extends React.Component<IProps, IState> {
                     {this.state.count}
                 </div>
                 <button onClick={this.clickHandler}>Click Me</button>
+                <button onClick={this.msgHandler}>Send Msg</button>
             </div>
         )
     }
 }
+
+export default Hello;

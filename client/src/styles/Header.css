@@ -1,0 +1,24 @@
+.app-header {
+    background: #9fc5f8;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.app-title {
+    text-align: center;
+    font-weight: bold;
+    font-family: Tahoma, sans-serif;
+}
+
+.back-btn {
+    position: absolute;
+    left: 22px;
+    border: 0;
+    border-radius: 10px;
+    background-color: white;
+    width: 24px;
+    height: 36px;
+}
