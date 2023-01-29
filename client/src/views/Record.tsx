@@ -1,8 +1,31 @@
 import React, { Component } from 'react'
 import { RouteComponentProps } from 'react-router-dom'
-import { Button } from '../components/Button'
 import { Header } from '../components/Header'
-import RecordForm from '../components/RecordForm';
+import { RecordForm } from '../components/RecordForm';
+import { Table } from '../components/Table';
+
+type RowData = {
+    catagory: string,
+    amount: number,
+    date: string
+}
+
+const data: RowData[] = [{
+    date: "1.1.1",
+    catagory: "Bills",
+    amount: 500
+},
+{
+    date: "1.1.1",
+    catagory: "Grocery",
+    amount: 500
+},
+{
+    date: "1.1.1",
+    catagory: "Health",
+    amount: 500
+}
+];
 
 export default class Record extends Component<RouteComponentProps> {
     render() {
@@ -10,7 +33,7 @@ export default class Record extends Component<RouteComponentProps> {
             <div>
                 <Header title='Expenses' back={() => this.props.history.push('/home')} />
                 <RecordForm />
-                <Button active={false} text='Confirm' onClick={() => this.props.history.push('/record')}></Button>
+                <Table data={data} title={"Expense history"} />
             </div>
         )
     }

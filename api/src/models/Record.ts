@@ -4,6 +4,7 @@ interface IRecord {
     amount: number;
     category: string;
     time: number;
+    list: []
 }
 
 const recordSchema: Schema = new Schema<IRecord>({
@@ -19,6 +20,9 @@ const recordSchema: Schema = new Schema<IRecord>({
     time: {
         type: Number,
         required: true
+    },
+    list: {
+        type: []
     }
 });
 

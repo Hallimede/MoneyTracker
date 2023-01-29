@@ -4,17 +4,8 @@
     font-weight: bold;
 }
 
-.digit-input {
-    text-align: right;
-    border: none;
-    width: 30px;
-}
-
-.digit-input-div {
-    /* border: 2px solid; */
-}
-
 .form-row {
+    padding: 5px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,4 +20,9 @@
     font-size: 20px;
     font-weight: bold;
     text-align: left;
+}
+
+.submit-button-div {
+    display: flex;
+    padding: 8px 0;
 }

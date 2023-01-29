@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import { Todo } from './components/Todo';
 import IndexRouter from './router/router';
 
 class App extends React.Component {
@@ -18,10 +17,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Todo title='sss' />
         <IndexRouter></IndexRouter>
-        {/* <Hello title='hihi' onMyClick={this.clickHandler} /> */}
-        {/* <List /> */}
       </div>
     );
   }
