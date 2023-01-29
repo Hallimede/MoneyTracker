@@ -1,6 +1,7 @@
 td {
     padding: 10px;
     border-left: 2px solid;
+    text-align: left;
 }
 
 th {
@@ -8,25 +9,18 @@ th {
     color: black;
     border-left: 2px solid;
     padding: 6px;
+    text-align: left;
 }
 
 tr:nth-child(odd) {
     background-color: #f2f2f2;
 }
 
-td:nth-child(1) {
-    text-align: left;
-}
-
-th:nth-child(1) {
-    text-align: left;
-}
-
-td:nth-child(2) {
+td:last-child {
     text-align: right;
 }
 
-th:nth-child(2) {
+th:last-child {
     text-align: right;
 }
 

@@ -25,16 +25,18 @@ interface IButtonProps {
     /**
      * The button click handler, could be called when inactive
      */
-    onClick: () => void;
+    onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+    // (event) => React.MouseEventHandler<HTMLButtonElement>
 }
 
 export const Button: React.FC<IButtonProps> = (props: IButtonProps) => {
     const mode = props.active ? 'btn--active' : 'btn--inactive';
     const size = props.size == null ? 'medium' : props.size;
+    const click = props.active ? props.onClick : undefined;
     return (
         <button
             className={['btn', `btn--${size}`, mode].join(' ')}
-            onClick={props.active ? props.onClick : () => { }}
+            onClick={click}
             style={{
                 backgroundColor: props.backgroundColor,
                 color: props.color

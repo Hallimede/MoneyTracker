@@ -4,49 +4,36 @@ import { DownOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 
 export interface IInputNumberProps {
-    amount: number,
-    onValueChange: (value: number) => void
+    catagory: number,
+    onCatagoryChange: (catagory: number) => void,
+    items: Array<{ label: string, key: number }>
 }
 
 export const MyDropdown: React.FC<IInputNumberProps> = (props: IInputNumberProps) => {
 
-
-    const items = [
-        {
-            label: 'Select One',
-            key: 0
-        },
-        {
-            label: 'Bills',
-            key: 1
-        },
-        {
-            label: 'Grocery',
-            key: 2
-        }]
-
     const handleMenuClick: MenuProps['onClick'] = ({ key }) => {
-        props.onValueChange(parseInt(key))
+        props.onCatagoryChange(parseInt(key));
     };
 
     const menu = {
-        items: items.filter((i) => i.key !== 0),
+        items: props.items.filter((i) => i.key !== 0),
         onClick: handleMenuClick
     }
 
+    const findCata = (props.items.find(i => i.key === props.catagory))?.label
+    const selected = findCata ? findCata : 'Select One';
     return (
-        <Dropdown menu={menu}>
+        <Dropdown menu={menu} >
             <Button style={{
                 width: '120px',
                 border: '2px solid',
                 borderRadius: '0px'
             }} size="large">
                 <Space>
-                    {(items.find(i => i.key === props.amount))?.label}
+                    {selected}
                     <DownOutlined />
                 </Space>
             </Button>
-        </Dropdown>
-
+        </Dropdown >
     )
 }

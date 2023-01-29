@@ -10,7 +10,10 @@ export const MyInputNumber: React.FC<IInputNumberProps> = (props: IInputNumberPr
 
     const handleNumberChange = (value: number | null) => {
         if (value) props.onValueChange(value);
-    }
+    };
+
+    // eslint-disable-next-line
+    const formatter = (value) => `$ ${Number.parseFloat((value === undefined ? "" : value).toString().replace(/[^\d\.\-]/g, '')).toFixed(2)}`;
 
     return (
         <InputNumber
@@ -19,11 +22,10 @@ export const MyInputNumber: React.FC<IInputNumberProps> = (props: IInputNumberPr
                 border: '2px solid',
                 borderRadius: '0px'
             }}
-            defaultValue={(props.amount)}
+            defaultValue={0}
             precision={2}
             min={0}
-            // eslint-disable-next-line
-            formatter={(value) => `$ ${Number.parseFloat((value === undefined ? "" : value).toString().replace(/[^\d\.\-]/g, '')).toFixed(2)}`}
+            formatter={formatter}
             onChange={handleNumberChange}
             size="large"
         />
