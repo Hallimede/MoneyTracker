@@ -3,6 +3,8 @@ import RecordController from "../controllers/RecordController";
 
 const router: Router = express.Router();
 
-router.get("/", RecordController.getSummary)
+router.post("/", RecordController.postNewRecord);
 
-export { router as summaryRouter }
+router.get("/", RecordController.getAllRecords);
+
+export { router as recordRouter }

@@ -1,11 +1,13 @@
 import express, { Express, Request, Response } from 'express';
 import mongoose, { ConnectOptions } from 'mongoose';
 import { summaryRouter } from './routes/summary';
+import { recordRouter } from './routes/record';
 
 const app: Express = express();
 
 app.use(express.json());
 app.use('/summary', summaryRouter);
+app.use('/record', recordRouter);
 
 app.get('/', (_req: Request, res: Response) => {
     res.send('Hello World!');

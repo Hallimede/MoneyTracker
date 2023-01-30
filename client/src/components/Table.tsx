@@ -6,7 +6,7 @@ interface ITableHeaderProps {
 }
 
 interface ITableProps<T> {
-    data: Array<T>,
+    data: Array<T> | null,
     title: string
 }
 
@@ -41,6 +41,7 @@ export const TableHeader: React.FC<ITableHeaderProps> = (props: ITableHeaderProp
 }
 
 export const TableBody = <T extends {}>(props: ITableBodyProps<T>) => {
+    if (props.data == null) return null;
     const rows = props.data.map((row, index) =>
         <tr key={`row-${index}`}>
             {props.columns.map((column, columnIndex) =>
@@ -51,7 +52,7 @@ export const TableBody = <T extends {}>(props: ITableBodyProps<T>) => {
 }
 
 export const Table = <T extends {}>(props: ITableProps<T>) => {
-    if (props.data == null) return null;
+    if (props.data == null || props.data.length === 0) return null;
     const columns = Object.keys(props.data[0]);
     return (
         <div className='table-div'>

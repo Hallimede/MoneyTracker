@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { HashRouter, Route, Redirect, Switch } from 'react-router-dom'
-import Home from '../views/Home'
-import Record from '../views/Record'
+import { Home } from '../views/Home'
+import { Record } from '../views/Record'
 
 export default class IndexRouter extends Component {
     render() {

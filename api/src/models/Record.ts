@@ -1,32 +1,28 @@
 import { Schema, Model, model } from "mongoose";
 
-interface IRecord {
+export interface IRecord {
     amount: number;
-    category: string;
-    time: number;
-    list: []
+    category: number;
+    time: number
 }
 
-const recordSchema: Schema = new Schema<IRecord>({
+export const RecordSchema: Schema = new Schema<IRecord>({
     amount: {
         type: Number,
         required: true,
         min: 0
     },
     category: {
-        type: String,
+        type: Number,
         required: true
     },
     time: {
         type: Number,
         required: true
-    },
-    list: {
-        type: []
     }
 });
 
-const Record: Model<IRecord> = model<IRecord>('Record', recordSchema);
+const Record: Model<IRecord> = model<IRecord>('Record', RecordSchema);
 
-export { Record };
+export default Record;
 

@@ -1,40 +1,44 @@
-import React, { Component } from 'react'
+import React, { useEffect, useState } from 'react'
 import { RouteComponentProps } from 'react-router-dom'
 import { Header } from '../components/Header'
 import { RecordForm } from '../components/RecordForm';
 import { Table } from '../components/Table';
 
 type RowData = {
-    catagory: string,
+    catagory: number,
     amount: number,
     date: string
 }
 
-const data: RowData[] = [{
-    date: "1.1.1",
-    catagory: "Bills",
-    amount: 500
-},
-{
-    date: "1.1.1",
-    catagory: "Grocery",
-    amount: 500
-},
-{
-    date: "1.1.1",
-    catagory: "Health",
-    amount: 500
-}
-];
+export const Record: React.FC<RouteComponentProps> = (props: RouteComponentProps) => {
 
-export default class Record extends Component<RouteComponentProps> {
-    render() {
-        return (
-            <div>
-                <Header title='Expenses' back={() => this.props.history.push('/home')} />
-                <RecordForm />
-                <Table data={data} title={"Expense history"} />
-            </div>
-        )
-    }
+    const [data, setData] = useState<RowData[]>([]);
+
+    useEffect(() => {
+
+        const requestData = {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }
+
+        fetch("/record/", requestData)
+            .then(res => res.json())
+            .then((result) => {
+                setData(result);
+            },
+                (error) => {
+                    console.log("api call ", error);
+                })
+
+    })
+
+    return (
+        <div>
+            <Header title='Expenses' back={() => props.history.push('/home')} />
+            <RecordForm />
+            <Table data={data} title={"Expense history"} />
+        </div>
+    )
 }

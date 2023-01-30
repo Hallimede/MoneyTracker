@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import "../styles/RecordForm.css"
 import { MyInputNumber } from './MyInputNumber';
 import { MyDropdown } from './MyDropdown';
@@ -23,22 +23,29 @@ export const RecordForm: React.FC = (props) => {
         e.preventDefault();
         console.log("Submitting...");
         console.log(amount, catagory);
-    }
 
-    useEffect(() => {
-        fetch("/summary/all")
+        const postBody = {
+            amount,
+            catagory
+        };
+
+        const requestData = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(postBody)
+        }
+
+        fetch("/record/", requestData)
             .then(res => res.json())
             .then((result) => {
                 console.log("api call ", JSON.stringify(result));
-                // this.setState({
-                //     list: result.list
-                // });
-                // console.log("look at list:", this.state.list);
             },
                 (error) => {
                     console.log("api call ", error);
                 })
-    })
+    }
 
     const items = [
         {
