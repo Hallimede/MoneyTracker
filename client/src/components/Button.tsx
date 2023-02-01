@@ -26,7 +26,6 @@ interface IButtonProps {
      * The button click handler, could be called when inactive
      */
     onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
-    // (event) => React.MouseEventHandler<HTMLButtonElement>
 }
 
 export const Button: React.FC<IButtonProps> = (props: IButtonProps) => {

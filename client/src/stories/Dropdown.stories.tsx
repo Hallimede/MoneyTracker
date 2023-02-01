@@ -14,6 +14,5 @@ const Template: ComponentStory<typeof MyDropdown> = (args) => <MyDropdown {...ar
 export const Primary = Template.bind({});
 Primary.args = {
     catagory: 0,
-    onCatagoryChange: () => { },
-    items: [{ label: 'Item 1', key: 1 }, { label: 'Item 2', key: 2 }, { label: 'Item 3', key: 3 }]
+    onCatagoryChange: () => { }
 };

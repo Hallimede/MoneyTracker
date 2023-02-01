@@ -4,7 +4,7 @@ import { MyInputNumber } from './MyInputNumber';
 import { MyDropdown } from './MyDropdown';
 import { Button } from './Button';
 
-export const RecordForm: React.FC = (props) => {
+export const RecordForm: React.FC = () => {
 
     const [amount, setAmount] = useState(0);
     const [catagory, setCatagory] = useState(0);
@@ -44,18 +44,12 @@ export const RecordForm: React.FC = (props) => {
             },
                 (error) => {
                     console.log("api call ", error);
-                })
-    }
+                });
 
-    const items = [
-        {
-            label: 'Bills',
-            key: 1
-        },
-        {
-            label: 'Grocery',
-            key: 2
-        }]
+        setAmount(0);
+        setCatagory(0);
+
+    }
 
     return (
         <div className='form-div'>
@@ -66,7 +60,7 @@ export const RecordForm: React.FC = (props) => {
             </div>
             <div className='form-row'>
                 <span className='row-label'>Catagory:</span>
-                <MyDropdown catagory={catagory} onCatagoryChange={handleCatagoryChange} items={items} />
+                <MyDropdown catagory={catagory} onCatagoryChange={handleCatagoryChange} />
             </div>
             <div className='submit-button-div'>
                 <Button active={active} text='Confirm' onClick={handleSubmit} />

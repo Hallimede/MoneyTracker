@@ -2,11 +2,11 @@ import React from 'react';
 import { Dropdown, Button, Space } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
+import { Category } from '../utils/category';
 
 export interface IInputNumberProps {
     catagory: number,
     onCatagoryChange: (catagory: number) => void,
-    items: Array<{ label: string, key: number }>
 }
 
 export const MyDropdown: React.FC<IInputNumberProps> = (props: IInputNumberProps) => {
@@ -16,12 +16,10 @@ export const MyDropdown: React.FC<IInputNumberProps> = (props: IInputNumberProps
     };
 
     const menu = {
-        items: props.items.filter((i) => i.key !== 0),
+        items: Category.ITEMS.filter((i) => i.key !== 0),
         onClick: handleMenuClick
     }
 
-    const findCata = (props.items.find(i => i.key === props.catagory))?.label
-    const selected = findCata ? findCata : 'Select One';
     return (
         <Dropdown menu={menu} >
             <Button style={{
@@ -30,7 +28,7 @@ export const MyDropdown: React.FC<IInputNumberProps> = (props: IInputNumberProps
                 borderRadius: '0px'
             }} size="large">
                 <Space>
-                    {selected}
+                    {Category.getCategoryString(props.catagory, 'Select One')}
                     <DownOutlined />
                 </Space>
             </Button>

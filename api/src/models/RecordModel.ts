@@ -2,19 +2,15 @@ import Record, { IRecord } from './record';
 import Time from '../utils/time';
 
 export interface IRecordReturn {
-    amount: number;
-    category: number;
     time: string;
+    category: number;
+    amount: number;
 }
 
 export interface ISummaryItem {
-    amount: number;
     category: number;
+    amount: number;
 }
-
-// export interface ISummary {
-//     items: Array<ISummaryItem>;
-// }
 
 class RecordModel {
     static async storeNewRecord(record: IRecord): Promise<IRecordReturn> {
@@ -55,7 +51,6 @@ class RecordModel {
         });
 
         return results;
-
     }
 }
 

@@ -28,6 +28,7 @@ export const MyInputNumber: React.FC<IInputNumberProps> = (props: IInputNumberPr
             formatter={formatter}
             onChange={handleNumberChange}
             size="large"
+            value={props.amount}
         />
     )
 }

@@ -1,9 +1,9 @@
 import { Schema, Model, model } from "mongoose";
 
 export interface IRecord {
-    amount: number;
+    time: number;
     category: number;
-    time: number
+    amount: number;
 }
 
 export const RecordSchema: Schema = new Schema<IRecord>({

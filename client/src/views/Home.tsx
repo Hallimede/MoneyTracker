@@ -32,13 +32,13 @@ export const Home: React.FC<RouteComponentProps> = (props: RouteComponentProps) 
                     console.log("api call ", error);
                 })
 
-    })
+    }, [data])
 
     return (
         <div>
             <Header title='MoneyTracker' />
             <Table data={data} title={"Expense summary"} />
-            <Button active={true} text='Add Expenses' onClick={(e: React.MouseEvent<HTMLButtonElement>) => props.history.push('/record')}></Button>
+            <Button active={true} text='Add Expenses' onClick={() => props.history.push('/record')}></Button>
         </div>
     )
 

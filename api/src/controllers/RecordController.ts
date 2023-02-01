@@ -18,7 +18,7 @@ class RecordController {
 
     static getAllRecords = (async function unboundGetAllRecords(_req: Request, res: Response) {
 
-        const results = await RecordModel.getAllRecords()
+        const results: Array<IRecordReturn> = await RecordModel.getAllRecords()
         res.status(200).send(results);
 
     }).bind(this);
