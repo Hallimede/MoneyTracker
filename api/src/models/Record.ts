@@ -1,7 +1,7 @@
 import { Schema, Model, model } from "mongoose";
 
 export interface IRecord {
-    time: number;
+    date: number;
     category: number;
     amount: number;
 }
@@ -16,7 +16,7 @@ export const RecordSchema: Schema = new Schema<IRecord>({
         type: Number,
         required: true
     },
-    time: {
+    date: {
         type: Number,
         required: true
     }

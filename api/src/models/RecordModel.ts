@@ -2,7 +2,7 @@ import Record, { IRecord } from './record';
 import Time from '../utils/time';
 
 export interface IRecordReturn {
-    time: string;
+    date: string;
     category: number;
     amount: number;
 }
@@ -18,7 +18,7 @@ class RecordModel {
         const resultReturn: IRecordReturn = {
             amount: result.amount,
             category: result.category,
-            time: Time.formatTime(result.time)
+            date: Time.formatTime(result.date)
         }
         return resultReturn;
     }
@@ -26,7 +26,7 @@ class RecordModel {
     static async getAllRecords(): Promise<Array<IRecordReturn>> {
         const all: Array<IRecord> = await Record.find();
         const results: Array<IRecordReturn> = new Array<IRecordReturn>();
-        all.map(record => results.push({ amount: record.amount, category: record.category, time: Time.formatTime(record.time) }));
+        all.map(record => results.push({ amount: record.amount, category: record.category, date: Time.formatTime(record.date) }));
         return results;
     }
 

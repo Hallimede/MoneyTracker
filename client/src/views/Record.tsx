@@ -13,6 +13,7 @@ type RowData = {
 export const Record: React.FC<RouteComponentProps> = (props: RouteComponentProps) => {
 
     const [data, setData] = useState<RowData[]>([]);
+    const columns = ['date', 'category', 'amount'];
 
     useEffect(() => {
 
@@ -38,7 +39,7 @@ export const Record: React.FC<RouteComponentProps> = (props: RouteComponentProps
         <div>
             <Header title='Expenses' back={() => props.history.push('/home')} />
             <RecordForm />
-            <Table data={data} title={"Expense history"} />
+            <Table data={data} columns={columns} title={"Expense history"} />
         </div>
     )
 }

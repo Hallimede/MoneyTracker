@@ -8,6 +8,7 @@ interface ITableHeaderProps {
 
 interface ITableProps<T> {
     data: Array<T> | null,
+    columns: Array<string>,
     title: string
 }
 
@@ -60,13 +61,13 @@ export const TableBody = <T extends {}>(props: ITableBodyProps<T>) => {
 // eslint-disable-next-line
 export const Table = <T extends {}>(props: ITableProps<T>) => {
     if (props.data == null || props.data.length === 0) return null;
-    const columns = Object.keys(props.data[0]);
+    const columns = props.columns == null ? Object.keys(props.data[0]) : props.columns;
     return (
         <div className='table-div'>
             <p className='table-title'>{`${props.title}:`}</p>
             <table>
                 <TableHeader columns={columns} />
-                <TableBody data={props.data} title={props.title} columns={columns} />
+                <TableBody data={props.data} columns={columns} title={props.title} />
             </table>
         </div>
     )

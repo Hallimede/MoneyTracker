@@ -9,7 +9,7 @@ class RecordController {
         const rec: IRecord = {
             amount: req.body.amount,
             category: req.body.catagory,
-            time: Time.getCurrentTime()
+            date: Time.getCurrentTime()
         };
         const result: IRecordReturn = await RecordModel.storeNewRecord(rec);
         console.log(result);
