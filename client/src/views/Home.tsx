@@ -3,6 +3,7 @@ import { RouteComponentProps } from 'react-router-dom'
 import { Header } from '../components/Header';
 import { Table } from '../components/Table';
 import { Button } from '../components/Button';
+import { socket } from '../utils/socket';
 
 type RowData = {
     catagory: string,
@@ -13,15 +14,13 @@ export const Home: React.FC<RouteComponentProps> = (props: RouteComponentProps) 
 
     const [data, setData] = useState<RowData[]>([]);
     const columns = ['category', 'amount'];
-
-    useEffect(() => {
-
+    const fetchSummary = () => {
         const requestData = {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
             }
-        }
+        };
 
         fetch("/summary/", requestData)
             .then(res => res.json())
@@ -31,9 +30,15 @@ export const Home: React.FC<RouteComponentProps> = (props: RouteComponentProps) 
             },
                 (error) => {
                     console.log("api call ", error);
-                })
+                });
+    }
 
-    }, [data])
+    useEffect(() => {
+        socket.on('newRecord', () => {
+            fetchSummary();
+        });
+        fetchSummary();
+    }, []);
 
     return (
         <div>

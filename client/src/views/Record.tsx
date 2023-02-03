@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import { RouteComponentProps } from 'react-router-dom'
-import { Header } from '../components/Header'
+import React, { useEffect, useState } from 'react';
+import { RouteComponentProps } from 'react-router-dom';
+import { Header } from '../components/Header';
 import { RecordForm } from '../components/RecordForm';
 import { Table } from '../components/Table';
+import { socket } from '../utils/socket';
 
-type RowData = {
+export type RecordData = {
     catagory: number,
     amount: number,
     date: string
@@ -12,11 +13,9 @@ type RowData = {
 
 export const Record: React.FC<RouteComponentProps> = (props: RouteComponentProps) => {
 
-    const [data, setData] = useState<RowData[]>([]);
+    const [data, setData] = useState<RecordData[]>([]);
     const columns = ['date', 'category', 'amount'];
-
-    useEffect(() => {
-
+    const fetchRecords = () => {
         const requestData = {
             method: 'GET',
             headers: {
@@ -32,8 +31,15 @@ export const Record: React.FC<RouteComponentProps> = (props: RouteComponentProps
                 (error) => {
                     console.log("api call ", error);
                 })
+    }
 
-    })
+    useEffect(() => {
+        socket.on('newRecord', (ndata) => {
+            console.log("coming", ndata);
+            setData(data => [...data, ndata]);
+        });
+        fetchRecords();
+    }, [])
 
     return (
         <div>

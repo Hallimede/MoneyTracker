@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import RecordModel, { IRecordReturn } from "../models/RecordModel";
 import Time from "../utils/Time";
 import { IRecord } from '../models/Record';
+import { io } from "../index"
 
 class RecordController {
 
@@ -13,6 +14,7 @@ class RecordController {
         };
         const result: IRecordReturn = await RecordModel.storeNewRecord(rec);
         console.log(result);
+        io.emit('newRecord', result);
         res.status(201).send(result);
     }).bind(this);
 
