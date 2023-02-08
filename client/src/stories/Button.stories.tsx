@@ -1,3 +1,5 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Button } from '../components/Button';
 

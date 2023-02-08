@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Table } from '../components/Table';
 

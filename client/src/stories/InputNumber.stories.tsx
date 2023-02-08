@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable react/react-in-jsx-scope */
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { MyInputNumber } from '../components/MyInputNumber';
 
