@@ -24,7 +24,7 @@ class RecordModel {
     }
 
     static async getAllRecords(): Promise<Array<IRecordReturn>> {
-        const all: Array<IRecord> = await Record.find();
+        const all: Array<IRecord> = await Record.find().sort({ date: 'desc' });
         const results: Array<IRecordReturn> = new Array<IRecordReturn>();
         all.map(record => results.push({ amount: record.amount, category: record.category, date: Time.formatTime(record.date) }));
         return results;

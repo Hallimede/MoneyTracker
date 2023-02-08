@@ -36,7 +36,7 @@ export const Record: React.FC<RouteComponentProps> = (props: RouteComponentProps
     useEffect(() => {
         socket.on('newRecord', (ndata) => {
             console.log("coming", ndata);
-            setData(data => [...data, ndata]);
+            setData(data => [ndata, ...data]);
         });
         fetchRecords();
     }, [])
