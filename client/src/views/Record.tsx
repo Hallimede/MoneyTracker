@@ -14,7 +14,7 @@ export type RecordData = {
 export const Record: React.FC<RouteComponentProps> = (props: RouteComponentProps) => {
 
     const [data, setData] = useState<RecordData[]>([]);
-    const columns = ['date', 'category', 'amount'];
+    const columns: string[] = ['date', 'category', 'amount'];
     const fetchRecords = () => {
         const requestData = {
             method: 'GET',

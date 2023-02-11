@@ -4,9 +4,11 @@ import Time from "../utils/Time";
 import { IRecord } from '../models/Record';
 import { io } from "../index"
 
+type ControllorFunction = (req: Request, res: Response) => void
+
 class RecordController {
 
-    static postNewRecord = (async function unboundPostNewRecord(req: Request, res: Response) {
+    static postNewRecord: ControllorFunction = (async function unboundPostNewRecord(req: Request, res: Response) {
         const rec: IRecord = {
             amount: req.body.amount,
             category: req.body.catagory,
@@ -18,14 +20,12 @@ class RecordController {
         res.status(201).send(result);
     }).bind(this);
 
-    static getAllRecords = (async function unboundGetAllRecords(_req: Request, res: Response) {
-
+    static getAllRecords: ControllorFunction = (async function unboundGetAllRecords(_req: Request, res: Response) {
         const results: Array<IRecordReturn> = await RecordModel.getAllRecords()
         res.status(200).send(results);
-
     }).bind(this);
 
-    static getSummary = (async function unboundGetSummary(_req: Request, res: Response) {
+    static getSummary: ControllorFunction = (async function unboundGetSummary(_req: Request, res: Response) {
         res.status(200).send(await RecordModel.getSummary());
     }).bind(this);
 

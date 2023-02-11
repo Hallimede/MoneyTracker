@@ -1,7 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Button } from '../components/Button';
+import { Button, IButtonProps } from '../components/Button';
 
 export default {
     title: 'My/Button',
@@ -13,21 +13,21 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Active = Template.bind({});
+export const Active: ComponentStory<React.FC<IButtonProps>> = Template.bind({});
 Active.args = {
     active: true,
     text: 'Active',
     onClick: () => { }
 };
 
-export const Inactive = Template.bind({});
+export const Inactive: ComponentStory<React.FC<IButtonProps>> = Template.bind({});
 Inactive.args = {
     active: false,
     text: 'Inactive',
     onClick: () => { }
 };
 
-export const Large = Template.bind({});
+export const Large: ComponentStory<React.FC<IButtonProps>> = Template.bind({});
 Large.args = {
     active: true,
     size: 'large',
@@ -35,7 +35,7 @@ Large.args = {
     onClick: () => { }
 }
 
-export const Small = Template.bind({});
+export const Small: ComponentStory<React.FC<IButtonProps>> = Template.bind({});
 Small.args = {
     active: true,
     size: 'small',

@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Button.css";
 
-interface IButtonProps {
+export interface IButtonProps {
     /**
      * Is this the principal call to action on the page?
      */
@@ -29,8 +29,8 @@ interface IButtonProps {
 }
 
 export const Button: React.FC<IButtonProps> = (props: IButtonProps) => {
-    const mode = props.active ? 'btn--active' : 'btn--inactive';
-    const size = props.size == null ? 'medium' : props.size;
+    const mode: string = props.active ? 'btn--active' : 'btn--inactive';
+    const size: string = props.size == null ? 'medium' : props.size;
     const click = props.active ? props.onClick : undefined;
     return (
         <button

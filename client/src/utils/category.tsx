@@ -29,7 +29,7 @@ export class Category {
 
     static getCategoryString(key: number, defaultStr: string): string {
         const find = (Category.ITEMS.find(i => i.key === key))?.label
-        const result = find ? find : defaultStr;
+        const result: string = find ? find : defaultStr;
         return result;
 
     }

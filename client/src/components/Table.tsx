@@ -29,7 +29,7 @@ export const ColumnHeader: React.FC<{ name: string }> = (props: { name: string }
 
 export const TableHeader: React.FC<ITableHeaderProps> = (props: ITableHeaderProps) => {
 
-    const headers = props.columns.map((column, index) =>
+    const headers: JSX.Element[] = props.columns.map((column, index) =>
     (<ColumnHeader
         name={column.charAt(0).toUpperCase() + column.slice(1)}
         key={`head-cell-${index}`}
@@ -44,7 +44,7 @@ export const TableHeader: React.FC<ITableHeaderProps> = (props: ITableHeaderProp
 // eslint-disable-next-line
 export const TableBody = <T extends {}>(props: ITableBodyProps<T>) => {
     if (props.data == null) return null;
-    const rows = props.data.map((row, index) => {
+    const rows: JSX.Element[] = props.data.map((row, index) => {
         return (<tr key={`row-${index}`}>
             {props.columns.map((column, columnIndex) => {
                 let display: string = row[column];

@@ -5,15 +5,15 @@ import { Table } from '../components/Table';
 import { Button } from '../components/Button';
 import { socket } from '../utils/socket';
 
-type RowData = {
+export type SummaryData = {
     catagory: string,
     amount: number
 }
 
 export const Home: React.FC<RouteComponentProps> = (props: RouteComponentProps) => {
 
-    const [data, setData] = useState<RowData[]>([]);
-    const columns = ['category', 'amount'];
+    const [data, setData] = useState<SummaryData[]>([]);
+    const columns: string[] = ['category', 'amount'];
     const fetchSummary = () => {
         const requestData = {
             method: 'GET',

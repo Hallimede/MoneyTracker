@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable react/react-in-jsx-scope */
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { MyDropdown } from '../components/MyDropdown';
+import { IInputNumberProps, MyDropdown } from '../components/MyDropdown';
 
 export default {
     title: 'My/Dropdown',
@@ -13,7 +13,7 @@ export default {
 
 const Template: ComponentStory<typeof MyDropdown> = (args) => <MyDropdown {...args} />;
 
-export const Primary = Template.bind({});
+export const Primary: ComponentStory<React.FC<IInputNumberProps>> = Template.bind({});
 Primary.args = {
     catagory: 0,
     onCatagoryChange: () => { }

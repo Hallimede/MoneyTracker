@@ -5,11 +5,11 @@ class Time {
 
     // Formats a unixTime number to a string "MM/DD/YY"
     // Returns a string
-    static formatTime(unixTime: number) {
-        const date = new Date(unixTime);
-        const year = date.getFullYear() % 100;
-        const month = date.getMonth() + 1;
-        const day = date.getDate();
+    static formatTime(unixTime: number): string {
+        const date: Date = new Date(unixTime);
+        const year: number = date.getFullYear() % 100;
+        const month: number = date.getMonth() + 1;
+        const day: number = date.getDate();
         return `${month}/${day}/${year}`;
     }
 }

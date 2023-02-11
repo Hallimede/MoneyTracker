@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable react/react-in-jsx-scope */
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { MyInputNumber } from '../components/MyInputNumber';
+import { IInputNumberProps, MyInputNumber } from '../components/MyInputNumber';
 
 export default {
     title: 'My/InputNumber',
@@ -13,7 +13,7 @@ export default {
 
 const Template: ComponentStory<typeof MyInputNumber> = (args) => <MyInputNumber {...args} />;
 
-export const Primary = Template.bind({});
+export const Primary: ComponentStory<React.FC<IInputNumberProps>> = Template.bind({});
 Primary.args = {
     amount: 0,
     onValueChange: () => { },

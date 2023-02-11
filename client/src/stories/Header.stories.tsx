@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable react/react-in-jsx-scope */
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Header } from '../components/Header';
+import { Header, IHeaderProps } from '../components/Header';
 
 export default {
   title: 'My/Header',
@@ -13,12 +13,12 @@ export default {
 
 const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
 
-export const Primary = Template.bind({});
+export const Primary: ComponentStory<React.FC<IHeaderProps>> = Template.bind({});
 Primary.args = {
   title: "MoneyTracker",
 };
 
-export const Detail = Template.bind({});
+export const Detail: ComponentStory<React.FC<IHeaderProps>> = Template.bind({});
 Detail.args = {
   title: "Expenses",
   back: () => { }
