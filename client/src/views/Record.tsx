@@ -15,7 +15,7 @@ export const Record: React.FC<RouteComponentProps> = (props: RouteComponentProps
 
     const [data, setData] = useState<RecordData[]>([]);
     const columns: string[] = ['date', 'category', 'amount'];
-    const fetchRecords = () => {
+    const fetchRecords: () => void = () => {
         const requestData = {
             method: 'GET',
             headers: {
@@ -34,7 +34,7 @@ export const Record: React.FC<RouteComponentProps> = (props: RouteComponentProps
     }
 
     useEffect(() => {
-        socket.on('newRecord', (ndata) => {
+        socket.on('newRecord', (ndata: RecordData) => {
             console.log("coming", ndata);
             setData(data => [ndata, ...data]);
         });

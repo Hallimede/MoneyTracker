@@ -14,7 +14,7 @@ export const Home: React.FC<RouteComponentProps> = (props: RouteComponentProps) 
 
     const [data, setData] = useState<SummaryData[]>([]);
     const columns: string[] = ['category', 'amount'];
-    const fetchSummary = () => {
+    const fetchSummary: () => void = () => {
         const requestData = {
             method: 'GET',
             headers: {
