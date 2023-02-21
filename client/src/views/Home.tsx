@@ -4,6 +4,7 @@ import { Header } from '../components/Header';
 import { Table } from '../components/Table';
 import { Button } from '../components/Button';
 import { socket } from '../utils/socket';
+// import store from '../store/store';
 
 export type SummaryData = {
     catagory: string,
@@ -27,6 +28,7 @@ export const Home: React.FC<RouteComponentProps> = (props: RouteComponentProps) 
             .then((result) => {
                 console.log(result);
                 setData(result);
+                // store.dispatch({ type: "hide" })
             },
                 (error) => {
                     console.log("api call ", error);

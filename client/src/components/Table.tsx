@@ -60,7 +60,10 @@ export const TableBody = <T extends {}>(props: ITableBodyProps<T>) => {
 
 // eslint-disable-next-line
 export const Table = <T extends {}>(props: ITableProps<T>) => {
-    if (props.data == null || props.data.length === 0) return null;
+    if (props.data == null || props.data.length === 0) {
+        console.log("No data to display")
+        return null;
+    }
     const columns = props.columns == null ? Object.keys(props.data[0]) : props.columns;
     return (
         <div className='table-div'>

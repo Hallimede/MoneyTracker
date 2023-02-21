@@ -2,7 +2,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Table } from '../components/Table';
 import type { SummaryData } from '../views/Home';
-import type { RecordData } from '../views/Record';
 
 export default {
     title: 'My/Table',
@@ -37,7 +36,7 @@ Primary.args = {
 
 export const Secondary = Template.bind({});
 
-const data2: RecordData[] = [{
+const data2: IRecordItem[] = [{
     date: "7/1/23",
     catagory: 1,
     amount: 200

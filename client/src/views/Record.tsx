@@ -4,16 +4,17 @@ import { Header } from '../components/Header';
 import { RecordForm } from '../components/RecordForm';
 import { Table } from '../components/Table';
 import { socket } from '../utils/socket';
+import store from '../store/store';
+import { ADD_RECORD } from '../constants/actionTypes'
+import { shallowEqual, useSelector } from 'react-redux';
 
-export type RecordData = {
-    catagory: number,
-    amount: number,
-    date: string
-}
 
 export const Record: React.FC<RouteComponentProps> = (props: RouteComponentProps) => {
 
-    const [data, setData] = useState<RecordData[]>([]);
+    const records = store.getState().records;
+    // const records: IRecordItem[] = useSelector((state: RecordsState) => state.records, shallowEqual);
+
+    const [data, setData] = useState<IRecordItem[]>(records);
     const columns: string[] = ['date', 'category', 'amount'];
     const fetchRecords: () => void = () => {
         const requestData = {
@@ -26,7 +27,9 @@ export const Record: React.FC<RouteComponentProps> = (props: RouteComponentProps
         fetch("/record/", requestData)
             .then(res => res.json())
             .then((result) => {
-                setData(result);
+                store.dispatch({ type: ADD_RECORD, records: result });
+                setData(store.getState().records);
+                console.log("after dispatch", store.getState().records)
             },
                 (error) => {
                     console.log("api call ", error);
@@ -34,9 +37,10 @@ export const Record: React.FC<RouteComponentProps> = (props: RouteComponentProps
     }
 
     useEffect(() => {
-        socket.on('newRecord', (ndata: RecordData) => {
+        socket.on('newRecord', (ndata: IRecordItem) => {
             console.log("coming", ndata);
             setData(data => [ndata, ...data]);
+            store.dispatch({ type: ADD_RECORD, records: [ndata] });
         });
         fetchRecords();
     }, [])
