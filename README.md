@@ -1,6 +1,6 @@
 # Money-Tracker
 
-An web application to track your money.
+A web application to track your money.
 
 ## Demo
 
