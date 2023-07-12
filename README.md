@@ -1,4 +1,4 @@
-# Money-Tracker
+# Money Tracker
 
 A web application to track your money.
 
