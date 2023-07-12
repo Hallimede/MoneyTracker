@@ -81,6 +81,6 @@
     "eslint": "^8.33.0",
     "eslint-plugin-react": "^7.32.2",
     "prop-types": "^15.8.1",
-    "webpack": "^5.75.0"
+    "webpack": "^5.76.0"
   }
 }
