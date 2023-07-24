@@ -2,687 +2,6 @@
 # yarn lockfile v1
 
 
-"@aws-crypto/ie11-detection@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.npmmirror.com/@aws-crypto/ie11-detection/-/ie11-detection-3.0.0.tgz"
-  dependencies:
-    tslib "^1.11.1"
-
-"@aws-crypto/sha256-browser@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.npmmirror.com/@aws-crypto/sha256-browser/-/sha256-browser-3.0.0.tgz"
-  dependencies:
-    "@aws-crypto/ie11-detection" "^3.0.0"
-    "@aws-crypto/sha256-js" "^3.0.0"
-    "@aws-crypto/supports-web-crypto" "^3.0.0"
-    "@aws-crypto/util" "^3.0.0"
-    "@aws-sdk/types" "^3.222.0"
-    "@aws-sdk/util-locate-window" "^3.0.0"
-    "@aws-sdk/util-utf8-browser" "^3.0.0"
-    tslib "^1.11.1"
-
-"@aws-crypto/sha256-js@3.0.0", "@aws-crypto/sha256-js@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.npmmirror.com/@aws-crypto/sha256-js/-/sha256-js-3.0.0.tgz"
-  dependencies:
-    "@aws-crypto/util" "^3.0.0"
-    "@aws-sdk/types" "^3.222.0"
-    tslib "^1.11.1"
-
-"@aws-crypto/supports-web-crypto@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.npmmirror.com/@aws-crypto/supports-web-crypto/-/supports-web-crypto-3.0.0.tgz"
-  dependencies:
-    tslib "^1.11.1"
-
-"@aws-crypto/util@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.npmmirror.com/@aws-crypto/util/-/util-3.0.0.tgz"
-  dependencies:
-    "@aws-sdk/types" "^3.222.0"
-    "@aws-sdk/util-utf8-browser" "^3.0.0"
-    tslib "^1.11.1"
-
-"@aws-sdk/abort-controller@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/abort-controller/-/abort-controller-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/client-cognito-identity@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/client-cognito-identity/-/client-cognito-identity-3.254.0.tgz"
-  dependencies:
-    "@aws-crypto/sha256-browser" "3.0.0"
-    "@aws-crypto/sha256-js" "3.0.0"
-    "@aws-sdk/client-sts" "3.254.0"
-    "@aws-sdk/config-resolver" "3.254.0"
-    "@aws-sdk/credential-provider-node" "3.254.0"
-    "@aws-sdk/fetch-http-handler" "3.254.0"
-    "@aws-sdk/hash-node" "3.254.0"
-    "@aws-sdk/invalid-dependency" "3.254.0"
-    "@aws-sdk/middleware-content-length" "3.254.0"
-    "@aws-sdk/middleware-endpoint" "3.254.0"
-    "@aws-sdk/middleware-host-header" "3.254.0"
-    "@aws-sdk/middleware-logger" "3.254.0"
-    "@aws-sdk/middleware-recursion-detection" "3.254.0"
-    "@aws-sdk/middleware-retry" "3.254.0"
-    "@aws-sdk/middleware-serde" "3.254.0"
-    "@aws-sdk/middleware-signing" "3.254.0"
-    "@aws-sdk/middleware-stack" "3.254.0"
-    "@aws-sdk/middleware-user-agent" "3.254.0"
-    "@aws-sdk/node-config-provider" "3.254.0"
-    "@aws-sdk/node-http-handler" "3.254.0"
-    "@aws-sdk/protocol-http" "3.254.0"
-    "@aws-sdk/smithy-client" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    "@aws-sdk/url-parser" "3.254.0"
-    "@aws-sdk/util-base64" "3.208.0"
-    "@aws-sdk/util-body-length-browser" "3.188.0"
-    "@aws-sdk/util-body-length-node" "3.208.0"
-    "@aws-sdk/util-defaults-mode-browser" "3.254.0"
-    "@aws-sdk/util-defaults-mode-node" "3.254.0"
-    "@aws-sdk/util-endpoints" "3.254.0"
-    "@aws-sdk/util-retry" "3.254.0"
-    "@aws-sdk/util-user-agent-browser" "3.254.0"
-    "@aws-sdk/util-user-agent-node" "3.254.0"
-    "@aws-sdk/util-utf8-browser" "3.188.0"
-    "@aws-sdk/util-utf8-node" "3.208.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/client-sso-oidc@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/client-sso-oidc/-/client-sso-oidc-3.254.0.tgz"
-  dependencies:
-    "@aws-crypto/sha256-browser" "3.0.0"
-    "@aws-crypto/sha256-js" "3.0.0"
-    "@aws-sdk/config-resolver" "3.254.0"
-    "@aws-sdk/fetch-http-handler" "3.254.0"
-    "@aws-sdk/hash-node" "3.254.0"
-    "@aws-sdk/invalid-dependency" "3.254.0"
-    "@aws-sdk/middleware-content-length" "3.254.0"
-    "@aws-sdk/middleware-endpoint" "3.254.0"
-    "@aws-sdk/middleware-host-header" "3.254.0"
-    "@aws-sdk/middleware-logger" "3.254.0"
-    "@aws-sdk/middleware-recursion-detection" "3.254.0"
-    "@aws-sdk/middleware-retry" "3.254.0"
-    "@aws-sdk/middleware-serde" "3.254.0"
-    "@aws-sdk/middleware-stack" "3.254.0"
-    "@aws-sdk/middleware-user-agent" "3.254.0"
-    "@aws-sdk/node-config-provider" "3.254.0"
-    "@aws-sdk/node-http-handler" "3.254.0"
-    "@aws-sdk/protocol-http" "3.254.0"
-    "@aws-sdk/smithy-client" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    "@aws-sdk/url-parser" "3.254.0"
-    "@aws-sdk/util-base64" "3.208.0"
-    "@aws-sdk/util-body-length-browser" "3.188.0"
-    "@aws-sdk/util-body-length-node" "3.208.0"
-    "@aws-sdk/util-defaults-mode-browser" "3.254.0"
-    "@aws-sdk/util-defaults-mode-node" "3.254.0"
-    "@aws-sdk/util-endpoints" "3.254.0"
-    "@aws-sdk/util-retry" "3.254.0"
-    "@aws-sdk/util-user-agent-browser" "3.254.0"
-    "@aws-sdk/util-user-agent-node" "3.254.0"
-    "@aws-sdk/util-utf8-browser" "3.188.0"
-    "@aws-sdk/util-utf8-node" "3.208.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/client-sso@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/client-sso/-/client-sso-3.254.0.tgz"
-  dependencies:
-    "@aws-crypto/sha256-browser" "3.0.0"
-    "@aws-crypto/sha256-js" "3.0.0"
-    "@aws-sdk/config-resolver" "3.254.0"
-    "@aws-sdk/fetch-http-handler" "3.254.0"
-    "@aws-sdk/hash-node" "3.254.0"
-    "@aws-sdk/invalid-dependency" "3.254.0"
-    "@aws-sdk/middleware-content-length" "3.254.0"
-    "@aws-sdk/middleware-endpoint" "3.254.0"
-    "@aws-sdk/middleware-host-header" "3.254.0"
-    "@aws-sdk/middleware-logger" "3.254.0"
-    "@aws-sdk/middleware-recursion-detection" "3.254.0"
-    "@aws-sdk/middleware-retry" "3.254.0"
-    "@aws-sdk/middleware-serde" "3.254.0"
-    "@aws-sdk/middleware-stack" "3.254.0"
-    "@aws-sdk/middleware-user-agent" "3.254.0"
-    "@aws-sdk/node-config-provider" "3.254.0"
-    "@aws-sdk/node-http-handler" "3.254.0"
-    "@aws-sdk/protocol-http" "3.254.0"
-    "@aws-sdk/smithy-client" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    "@aws-sdk/url-parser" "3.254.0"
-    "@aws-sdk/util-base64" "3.208.0"
-    "@aws-sdk/util-body-length-browser" "3.188.0"
-    "@aws-sdk/util-body-length-node" "3.208.0"
-    "@aws-sdk/util-defaults-mode-browser" "3.254.0"
-    "@aws-sdk/util-defaults-mode-node" "3.254.0"
-    "@aws-sdk/util-endpoints" "3.254.0"
-    "@aws-sdk/util-retry" "3.254.0"
-    "@aws-sdk/util-user-agent-browser" "3.254.0"
-    "@aws-sdk/util-user-agent-node" "3.254.0"
-    "@aws-sdk/util-utf8-browser" "3.188.0"
-    "@aws-sdk/util-utf8-node" "3.208.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/client-sts@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/client-sts/-/client-sts-3.254.0.tgz"
-  dependencies:
-    "@aws-crypto/sha256-browser" "3.0.0"
-    "@aws-crypto/sha256-js" "3.0.0"
-    "@aws-sdk/config-resolver" "3.254.0"
-    "@aws-sdk/credential-provider-node" "3.254.0"
-    "@aws-sdk/fetch-http-handler" "3.254.0"
-    "@aws-sdk/hash-node" "3.254.0"
-    "@aws-sdk/invalid-dependency" "3.254.0"
-    "@aws-sdk/middleware-content-length" "3.254.0"
-    "@aws-sdk/middleware-endpoint" "3.254.0"
-    "@aws-sdk/middleware-host-header" "3.254.0"
-    "@aws-sdk/middleware-logger" "3.254.0"
-    "@aws-sdk/middleware-recursion-detection" "3.254.0"
-    "@aws-sdk/middleware-retry" "3.254.0"
-    "@aws-sdk/middleware-sdk-sts" "3.254.0"
-    "@aws-sdk/middleware-serde" "3.254.0"
-    "@aws-sdk/middleware-signing" "3.254.0"
-    "@aws-sdk/middleware-stack" "3.254.0"
-    "@aws-sdk/middleware-user-agent" "3.254.0"
-    "@aws-sdk/node-config-provider" "3.254.0"
-    "@aws-sdk/node-http-handler" "3.254.0"
-    "@aws-sdk/protocol-http" "3.254.0"
-    "@aws-sdk/smithy-client" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    "@aws-sdk/url-parser" "3.254.0"
-    "@aws-sdk/util-base64" "3.208.0"
-    "@aws-sdk/util-body-length-browser" "3.188.0"
-    "@aws-sdk/util-body-length-node" "3.208.0"
-    "@aws-sdk/util-defaults-mode-browser" "3.254.0"
-    "@aws-sdk/util-defaults-mode-node" "3.254.0"
-    "@aws-sdk/util-endpoints" "3.254.0"
-    "@aws-sdk/util-retry" "3.254.0"
-    "@aws-sdk/util-user-agent-browser" "3.254.0"
-    "@aws-sdk/util-user-agent-node" "3.254.0"
-    "@aws-sdk/util-utf8-browser" "3.188.0"
-    "@aws-sdk/util-utf8-node" "3.208.0"
-    fast-xml-parser "4.0.11"
-    tslib "^2.3.1"
-
-"@aws-sdk/config-resolver@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/config-resolver/-/config-resolver-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/signature-v4" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    "@aws-sdk/util-config-provider" "3.208.0"
-    "@aws-sdk/util-middleware" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/credential-provider-cognito-identity@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/credential-provider-cognito-identity/-/credential-provider-cognito-identity-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/client-cognito-identity" "3.254.0"
-    "@aws-sdk/property-provider" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/credential-provider-env@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/credential-provider-env/-/credential-provider-env-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/property-provider" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/credential-provider-imds@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/credential-provider-imds/-/credential-provider-imds-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/node-config-provider" "3.254.0"
-    "@aws-sdk/property-provider" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    "@aws-sdk/url-parser" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/credential-provider-ini@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/credential-provider-ini/-/credential-provider-ini-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/credential-provider-env" "3.254.0"
-    "@aws-sdk/credential-provider-imds" "3.254.0"
-    "@aws-sdk/credential-provider-process" "3.254.0"
-    "@aws-sdk/credential-provider-sso" "3.254.0"
-    "@aws-sdk/credential-provider-web-identity" "3.254.0"
-    "@aws-sdk/property-provider" "3.254.0"
-    "@aws-sdk/shared-ini-file-loader" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/credential-provider-node@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/credential-provider-node/-/credential-provider-node-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/credential-provider-env" "3.254.0"
-    "@aws-sdk/credential-provider-imds" "3.254.0"
-    "@aws-sdk/credential-provider-ini" "3.254.0"
-    "@aws-sdk/credential-provider-process" "3.254.0"
-    "@aws-sdk/credential-provider-sso" "3.254.0"
-    "@aws-sdk/credential-provider-web-identity" "3.254.0"
-    "@aws-sdk/property-provider" "3.254.0"
-    "@aws-sdk/shared-ini-file-loader" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/credential-provider-process@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/credential-provider-process/-/credential-provider-process-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/property-provider" "3.254.0"
-    "@aws-sdk/shared-ini-file-loader" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/credential-provider-sso@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/credential-provider-sso/-/credential-provider-sso-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/client-sso" "3.254.0"
-    "@aws-sdk/property-provider" "3.254.0"
-    "@aws-sdk/shared-ini-file-loader" "3.254.0"
-    "@aws-sdk/token-providers" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/credential-provider-web-identity@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/credential-provider-web-identity/-/credential-provider-web-identity-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/property-provider" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/credential-providers@^3.186.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/credential-providers/-/credential-providers-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/client-cognito-identity" "3.254.0"
-    "@aws-sdk/client-sso" "3.254.0"
-    "@aws-sdk/client-sts" "3.254.0"
-    "@aws-sdk/credential-provider-cognito-identity" "3.254.0"
-    "@aws-sdk/credential-provider-env" "3.254.0"
-    "@aws-sdk/credential-provider-imds" "3.254.0"
-    "@aws-sdk/credential-provider-ini" "3.254.0"
-    "@aws-sdk/credential-provider-node" "3.254.0"
-    "@aws-sdk/credential-provider-process" "3.254.0"
-    "@aws-sdk/credential-provider-sso" "3.254.0"
-    "@aws-sdk/credential-provider-web-identity" "3.254.0"
-    "@aws-sdk/property-provider" "3.254.0"
-    "@aws-sdk/shared-ini-file-loader" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/fetch-http-handler@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/fetch-http-handler/-/fetch-http-handler-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/protocol-http" "3.254.0"
-    "@aws-sdk/querystring-builder" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    "@aws-sdk/util-base64" "3.208.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/hash-node@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/hash-node/-/hash-node-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/types" "3.254.0"
-    "@aws-sdk/util-buffer-from" "3.208.0"
-    "@aws-sdk/util-utf8" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/invalid-dependency@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/invalid-dependency/-/invalid-dependency-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/is-array-buffer@3.201.0":
-  version "3.201.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/is-array-buffer/-/is-array-buffer-3.201.0.tgz"
-  dependencies:
-    tslib "^2.3.1"
-
-"@aws-sdk/middleware-content-length@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/middleware-content-length/-/middleware-content-length-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/protocol-http" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/middleware-endpoint@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/middleware-endpoint/-/middleware-endpoint-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/middleware-serde" "3.254.0"
-    "@aws-sdk/protocol-http" "3.254.0"
-    "@aws-sdk/signature-v4" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    "@aws-sdk/url-parser" "3.254.0"
-    "@aws-sdk/util-config-provider" "3.208.0"
-    "@aws-sdk/util-middleware" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/middleware-host-header@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/middleware-host-header/-/middleware-host-header-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/protocol-http" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/middleware-logger@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/middleware-logger/-/middleware-logger-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/middleware-recursion-detection@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/middleware-recursion-detection/-/middleware-recursion-detection-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/protocol-http" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/middleware-retry@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/middleware-retry/-/middleware-retry-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/protocol-http" "3.254.0"
-    "@aws-sdk/service-error-classification" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    "@aws-sdk/util-middleware" "3.254.0"
-    "@aws-sdk/util-retry" "3.254.0"
-    tslib "^2.3.1"
-    uuid "^8.3.2"
-
-"@aws-sdk/middleware-sdk-sts@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/middleware-sdk-sts/-/middleware-sdk-sts-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/middleware-signing" "3.254.0"
-    "@aws-sdk/property-provider" "3.254.0"
-    "@aws-sdk/protocol-http" "3.254.0"
-    "@aws-sdk/signature-v4" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/middleware-serde@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/middleware-serde/-/middleware-serde-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/middleware-signing@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/middleware-signing/-/middleware-signing-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/property-provider" "3.254.0"
-    "@aws-sdk/protocol-http" "3.254.0"
-    "@aws-sdk/signature-v4" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    "@aws-sdk/util-middleware" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/middleware-stack@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/middleware-stack/-/middleware-stack-3.254.0.tgz"
-  dependencies:
-    tslib "^2.3.1"
-
-"@aws-sdk/middleware-user-agent@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/middleware-user-agent/-/middleware-user-agent-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/protocol-http" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/node-config-provider@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/node-config-provider/-/node-config-provider-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/property-provider" "3.254.0"
-    "@aws-sdk/shared-ini-file-loader" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/node-http-handler@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/node-http-handler/-/node-http-handler-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/abort-controller" "3.254.0"
-    "@aws-sdk/protocol-http" "3.254.0"
-    "@aws-sdk/querystring-builder" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/property-provider@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/property-provider/-/property-provider-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/protocol-http@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/protocol-http/-/protocol-http-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/querystring-builder@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/querystring-builder/-/querystring-builder-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/types" "3.254.0"
-    "@aws-sdk/util-uri-escape" "3.201.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/querystring-parser@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/querystring-parser/-/querystring-parser-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/service-error-classification@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/service-error-classification/-/service-error-classification-3.254.0.tgz"
-
-"@aws-sdk/shared-ini-file-loader@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/shared-ini-file-loader/-/shared-ini-file-loader-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/signature-v4@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/signature-v4/-/signature-v4-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/is-array-buffer" "3.201.0"
-    "@aws-sdk/types" "3.254.0"
-    "@aws-sdk/util-hex-encoding" "3.201.0"
-    "@aws-sdk/util-middleware" "3.254.0"
-    "@aws-sdk/util-uri-escape" "3.201.0"
-    "@aws-sdk/util-utf8" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/smithy-client@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/smithy-client/-/smithy-client-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/middleware-stack" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/token-providers@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/token-providers/-/token-providers-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/client-sso-oidc" "3.254.0"
-    "@aws-sdk/property-provider" "3.254.0"
-    "@aws-sdk/shared-ini-file-loader" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/types@3.254.0", "@aws-sdk/types@^3.222.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/types/-/types-3.254.0.tgz"
-  dependencies:
-    tslib "^2.3.1"
-
-"@aws-sdk/url-parser@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/url-parser/-/url-parser-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/querystring-parser" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/util-base64@3.208.0":
-  version "3.208.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/util-base64/-/util-base64-3.208.0.tgz"
-  dependencies:
-    "@aws-sdk/util-buffer-from" "3.208.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/util-body-length-browser@3.188.0":
-  version "3.188.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/util-body-length-browser/-/util-body-length-browser-3.188.0.tgz"
-  dependencies:
-    tslib "^2.3.1"
-
-"@aws-sdk/util-body-length-node@3.208.0":
-  version "3.208.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/util-body-length-node/-/util-body-length-node-3.208.0.tgz"
-  dependencies:
-    tslib "^2.3.1"
-
-"@aws-sdk/util-buffer-from@3.208.0":
-  version "3.208.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/util-buffer-from/-/util-buffer-from-3.208.0.tgz"
-  dependencies:
-    "@aws-sdk/is-array-buffer" "3.201.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/util-config-provider@3.208.0":
-  version "3.208.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/util-config-provider/-/util-config-provider-3.208.0.tgz"
-  dependencies:
-    tslib "^2.3.1"
-
-"@aws-sdk/util-defaults-mode-browser@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/util-defaults-mode-browser/-/util-defaults-mode-browser-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/property-provider" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    bowser "^2.11.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/util-defaults-mode-node@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/util-defaults-mode-node/-/util-defaults-mode-node-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/config-resolver" "3.254.0"
-    "@aws-sdk/credential-provider-imds" "3.254.0"
-    "@aws-sdk/node-config-provider" "3.254.0"
-    "@aws-sdk/property-provider" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/util-endpoints@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/util-endpoints/-/util-endpoints-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/util-hex-encoding@3.201.0":
-  version "3.201.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/util-hex-encoding/-/util-hex-encoding-3.201.0.tgz"
-  dependencies:
-    tslib "^2.3.1"
-
-"@aws-sdk/util-locate-window@^3.0.0":
-  version "3.208.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/util-locate-window/-/util-locate-window-3.208.0.tgz"
-  dependencies:
-    tslib "^2.3.1"
-
-"@aws-sdk/util-middleware@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/util-middleware/-/util-middleware-3.254.0.tgz"
-  dependencies:
-    tslib "^2.3.1"
-
-"@aws-sdk/util-retry@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/util-retry/-/util-retry-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/service-error-classification" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/util-uri-escape@3.201.0":
-  version "3.201.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/util-uri-escape/-/util-uri-escape-3.201.0.tgz"
-  dependencies:
-    tslib "^2.3.1"
-
-"@aws-sdk/util-user-agent-browser@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/util-user-agent-browser/-/util-user-agent-browser-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/types" "3.254.0"
-    bowser "^2.11.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/util-user-agent-node@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/util-user-agent-node/-/util-user-agent-node-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/node-config-provider" "3.254.0"
-    "@aws-sdk/types" "3.254.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/util-utf8-browser@3.188.0", "@aws-sdk/util-utf8-browser@^3.0.0":
-  version "3.188.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/util-utf8-browser/-/util-utf8-browser-3.188.0.tgz"
-  dependencies:
-    tslib "^2.3.1"
-
-"@aws-sdk/util-utf8-node@3.208.0":
-  version "3.208.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/util-utf8-node/-/util-utf8-node-3.208.0.tgz"
-  dependencies:
-    "@aws-sdk/util-buffer-from" "3.208.0"
-    tslib "^2.3.1"
-
-"@aws-sdk/util-utf8@3.254.0":
-  version "3.254.0"
-  resolved "https://registry.npmmirror.com/@aws-sdk/util-utf8/-/util-utf8-3.254.0.tgz"
-  dependencies:
-    "@aws-sdk/util-buffer-from" "3.208.0"
-    tslib "^2.3.1"
-
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
   resolved "https://registry.npmmirror.com/@cspotcode/source-map-support/-/source-map-support-0.8.1.tgz"
@@ -856,10 +175,6 @@ balanced-match@^1.0.0:
   version "1.0.2"
   resolved "https://registry.npmmirror.com/balanced-match/-/balanced-match-1.0.2.tgz"
 
-base64-js@^1.3.1:
-  version "1.5.1"
-  resolved "https://registry.npmmirror.com/base64-js/-/base64-js-1.5.1.tgz"
-
 base64id@2.0.0, base64id@~2.0.0:
   version "2.0.0"
   resolved "https://registry.npmmirror.com/base64id/-/base64id-2.0.0.tgz"
@@ -885,10 +200,6 @@ body-parser@1.20.1:
     type-is "~1.6.18"
     unpipe "1.0.0"
 
-bowser@^2.11.0:
-  version "2.11.0"
-  resolved "https://registry.npmmirror.com/bowser/-/bowser-2.11.0.tgz"
-
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://registry.npmmirror.com/brace-expansion/-/brace-expansion-1.1.11.tgz"
@@ -902,22 +213,13 @@ braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-bson@^4.7.0:
-  version "4.7.2"
-  resolved "https://registry.npmmirror.com/bson/-/bson-4.7.2.tgz"
-  dependencies:
-    buffer "^5.6.0"
+bson@^5.4.0:
+  version "5.4.0"
+  resolved "https://registry.npmmirror.com/bson/-/bson-5.4.0.tgz#0eea77276d490953ad8616b483298dbff07384c6"
 
 buffer-from@^1.0.0:
   version "1.1.2"
   resolved "https://registry.npmmirror.com/buffer-from/-/buffer-from-1.1.2.tgz"
-
-buffer@^5.6.0:
-  version "5.7.1"
-  resolved "https://registry.npmmirror.com/buffer/-/buffer-5.7.1.tgz"
-  dependencies:
-    base64-js "^1.3.1"
-    ieee754 "^1.1.13"
 
 bytes@3.1.2:
   version "3.1.2"
@@ -1088,12 +390,6 @@ express@^4.18.2:
     utils-merge "1.0.1"
     vary "~1.1.2"
 
-fast-xml-parser@4.0.11:
-  version "4.0.11"
-  resolved "https://registry.npmmirror.com/fast-xml-parser/-/fast-xml-parser-4.0.11.tgz"
-  dependencies:
-    strnum "^1.0.5"
-
 fill-range@^7.0.1:
   version "7.0.1"
   resolved "https://registry.npmmirror.com/fill-range/-/fill-range-7.0.1.tgz"
@@ -1186,10 +482,6 @@ iconv-lite@0.4.24:
   resolved "https://registry.npmmirror.com/iconv-lite/-/iconv-lite-0.4.24.tgz"
   dependencies:
     safer-buffer ">= 2.1.2 < 3"
-
-ieee754@^1.1.13:
-  version "1.2.1"
-  resolved "https://registry.npmmirror.com/ieee754/-/ieee754-1.2.1.tgz"
 
 ignore-by-default@^1.0.1:
   version "1.0.1"
@@ -1292,33 +584,32 @@ mkdirp@^1.0.4:
   version "1.0.4"
   resolved "https://registry.npmmirror.com/mkdirp/-/mkdirp-1.0.4.tgz"
 
-mongodb-connection-string-url@^2.5.4:
+mongodb-connection-string-url@^2.6.0:
   version "2.6.0"
-  resolved "https://registry.npmmirror.com/mongodb-connection-string-url/-/mongodb-connection-string-url-2.6.0.tgz"
+  resolved "https://registry.npmmirror.com/mongodb-connection-string-url/-/mongodb-connection-string-url-2.6.0.tgz#57901bf352372abdde812c81be47b75c6b2ec5cf"
   dependencies:
     "@types/whatwg-url" "^8.2.1"
     whatwg-url "^11.0.0"
 
-mongodb@4.12.1:
-  version "4.12.1"
-  resolved "https://registry.npmmirror.com/mongodb/-/mongodb-4.12.1.tgz"
+mongodb@5.7.0:
+  version "5.7.0"
+  resolved "https://registry.npmmirror.com/mongodb/-/mongodb-5.7.0.tgz#e16d2fcdfd9f8503ec2d88288392dc3235bb3ecc"
   dependencies:
-    bson "^4.7.0"
-    mongodb-connection-string-url "^2.5.4"
+    bson "^5.4.0"
+    mongodb-connection-string-url "^2.6.0"
     socks "^2.7.1"
   optionalDependencies:
-    "@aws-sdk/credential-providers" "^3.186.0"
     saslprep "^1.0.3"
 
 mongoose@*:
-  version "6.8.4"
-  resolved "https://registry.npmmirror.com/mongoose/-/mongoose-6.8.4.tgz"
+  version "7.4.0"
+  resolved "https://registry.npmmirror.com/mongoose/-/mongoose-7.4.0.tgz#3726a8dea0c9e2d54651845cc84c813a6507906a"
   dependencies:
-    bson "^4.7.0"
+    bson "^5.4.0"
     kareem "2.5.1"
-    mongodb "4.12.1"
+    mongodb "5.7.0"
     mpath "0.9.0"
-    mquery "4.0.3"
+    mquery "5.0.0"
     ms "2.1.3"
     sift "16.0.1"
 
@@ -1326,9 +617,9 @@ mpath@0.9.0:
   version "0.9.0"
   resolved "https://registry.npmmirror.com/mpath/-/mpath-0.9.0.tgz"
 
-mquery@4.0.3:
-  version "4.0.3"
-  resolved "https://registry.npmmirror.com/mquery/-/mquery-4.0.3.tgz"
+mquery@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npmmirror.com/mquery/-/mquery-5.0.0.tgz#a95be5dfc610b23862df34a47d3e5d60e110695d"
   dependencies:
     debug "4.x"
 
@@ -1600,10 +891,6 @@ strip-json-comments@^2.0.0:
   version "2.0.1"
   resolved "https://registry.npmmirror.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz"
 
-strnum@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.npmmirror.com/strnum/-/strnum-1.0.5.tgz"
-
 supports-color@^5.5.0:
   version "5.5.0"
   resolved "https://registry.npmmirror.com/supports-color/-/supports-color-5.5.0.tgz"
@@ -1686,14 +973,6 @@ tsconfig@^7.0.0:
     strip-bom "^3.0.0"
     strip-json-comments "^2.0.0"
 
-tslib@^1.11.1:
-  version "1.14.1"
-  resolved "https://registry.npmmirror.com/tslib/-/tslib-1.14.1.tgz"
-
-tslib@^2.3.1:
-  version "2.4.1"
-  resolved "https://registry.npmmirror.com/tslib/-/tslib-2.4.1.tgz"
-
 type-is@~1.6.18:
   version "1.6.18"
   resolved "https://registry.npmmirror.com/type-is/-/type-is-1.6.18.tgz"
@@ -1716,10 +995,6 @@ unpipe@1.0.0, unpipe@~1.0.0:
 utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.npmmirror.com/utils-merge/-/utils-merge-1.0.1.tgz"
-
-uuid@^8.3.2:
-  version "8.3.2"
-  resolved "https://registry.npmmirror.com/uuid/-/uuid-8.3.2.tgz"
 
 v8-compile-cache-lib@^3.0.1:
   version "3.0.1"
