@@ -62,7 +62,7 @@
   "proxy": "http://localhost:3080",
   "devDependencies": {
     "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-essentials": "^7.0.26",
+    "@storybook/addon-essentials": "^7.5.3",
     "@storybook/addon-interactions": "^6.5.16",
     "@storybook/addon-links": "^6.5.16",
     "@storybook/builder-webpack5": "^6.5.16",
